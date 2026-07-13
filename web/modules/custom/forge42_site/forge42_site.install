@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for Forge42 Site.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function forge42_site_install(): void {
+  \Drupal::messenger()->addStatus(t('Forge42 starter module installed. Enable the Forge42 Theme and set it as default.'));
+}

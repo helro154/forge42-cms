@@ -1,0 +1,81 @@
+:root {
+  --forge-navy: #0f172a;
+  --forge-navy-2: #172554;
+  --forge-blue: #2563eb;
+  --forge-blue-dark: #1d4ed8;
+  --forge-orange: #f97316;
+  --forge-steel: #64748b;
+  --forge-light: #f8fafc;
+  --forge-border: #e2e8f0;
+  --forge-white: #ffffff;
+  --forge-text: #1e293b;
+  --forge-muted: #475569;
+  --forge-radius: 18px;
+  --forge-shadow: 0 18px 45px rgba(15, 23, 42, .10);
+  --forge-container: 1200px;
+  --forge-transition: 180ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--forge-text);
+  background: var(--forge-white);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--forge-blue);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--forge-blue-dark);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  color: var(--forge-navy);
+  font-family: Poppins, Inter, sans-serif;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(2.8rem, 6vw, 5.6rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+h3 { font-size: 1.3rem; }
+
+p {
+  margin: 0 0 1rem;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--forge-orange);
+  outline-offset: 3px;
+}

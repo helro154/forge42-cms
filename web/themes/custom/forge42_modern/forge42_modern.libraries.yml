@@ -1,0 +1,13 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      css/base.css: {}
+      css/layout.css: {}
+      css/components.css: {}
+      css/utilities.css: {}
+  js:
+    js/forge42.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

@@ -1,0 +1,44 @@
+{
+  "name": "forge42/forge42-drupal",
+  "description": "Forge42 Solutions Drupal 11 starter site",
+  "type": "project",
+  "license": "proprietary",
+  "repositories": [
+    {"type": "composer", "url": "https://packages.drupal.org/8"}
+  ],
+  "require": {
+    "composer/installers": "^2.3",
+    "drupal/admin_toolbar": "^3.5",
+    "drupal/core-composer-scaffold": "^11.0",
+    "drupal/core-project-message": "^11.0",
+    "drupal/core-recommended": "^11.0",
+    "drupal/metatag": "^2.1",
+    "drupal/pathauto": "^1.13",
+    "drupal/redirect": "^1.10",
+    "drupal/webform": "^6.3",
+    "drush/drush": "^13.7"
+  },
+  "conflict": {"drupal/drupal": "*"},
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "symfony/runtime": true
+    },
+    "sort-packages": true
+  },
+  "extra": {
+    "drupal-scaffold": {"locations": {"web-root": "web/"}},
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": ["type:drupal-library"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+    }
+  }
+}

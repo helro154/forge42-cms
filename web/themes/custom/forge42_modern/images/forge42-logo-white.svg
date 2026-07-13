@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title desc">
+  <title id="title">Forge42 Solutions</title>
+  <desc id="desc">Forge42 Solutions wordmark with geometric F icon.</desc>
+  <rect width="120" height="120" rx="24" fill="#2563eb"/>
+  <path d="M28 28h64v18H48v16h36v18H48v28H28z" fill="#fff"/>
+  <path d="M78 62h30v18H78z" fill="#f97316"/>
+  <text x="145" y="58" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Forge42</text>
+  <text x="148" y="92" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="5" fill="#bfdbfe">SOLUTIONS</text>
+</svg>

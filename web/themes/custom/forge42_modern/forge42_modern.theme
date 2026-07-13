@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks and preprocess functions for Forge42 Modern.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function forge42_modern_preprocess_page(array &$variables): void {
+  $variables['forge42_tagline'] = 'Enterprise Technology. Done Right the First Time.';
+}

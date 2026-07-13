@@ -1,0 +1,19 @@
+name: Forge42 Modern
+type: theme
+description: 'Modern custom Drupal 11 theme for Forge42 Solutions.'
+package: Forge42
+core_version_requirement: ^10 || ^11
+base theme: false
+
+libraries:
+  - forge42_modern/global
+
+regions:
+  header: Header
+  primary_menu: Primary menu
+  hero: Hero
+  highlighted: Highlighted
+  content_top: Content top
+  content: Content
+  content_bottom: Content bottom
+  footer: Footer

@@ -1,0 +1,8 @@
+ddev start
+ddev composer install
+ddev drush site:install standard --account-name=admin --account-pass=admin --site-name="Forge42 Solutions" -y
+ddev drush en admin_toolbar admin_toolbar_tools metatag pathauto redirect webform forge42_site -y
+ddev drush theme:enable forge42_theme -y
+ddev drush config:set system.theme default forge42_theme -y
+ddev drush cr
+ddev launch

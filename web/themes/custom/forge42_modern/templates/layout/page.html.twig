@@ -1,0 +1,114 @@
+<header class="site-header">
+  <div class="forge-container site-header__inner">
+    <a href="{{ path('<front>') }}" class="site-branding" aria-label="{{ 'Forge42 Solutions home'|t }}">
+      <img src="{{ base_path ~ directory }}/images/forge42-logo.svg" alt="Forge42 Solutions">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="forge42-main-nav">
+      {{ 'Menu'|t }}
+    </button>
+
+    <nav id="forge42-main-nav" class="main-nav" aria-label="{{ 'Primary navigation'|t }}">
+      {{ page.primary_menu }}
+      <a class="btn btn--primary" href="/contact">{{ 'Schedule a Consultation'|t }}</a>
+    </nav>
+  </div>
+</header>
+
+{% if is_front %}
+  <main id="main-content" class="main-content">
+    <section class="hero">
+      <div class="forge-container hero__inner">
+        <div class="hero__eyebrow">{{ 'Engineering confidence'|t }}</div>
+        <h1>{{ 'Enterprise Technology. Done Right the First Time.'|t }}</h1>
+        <p>{{ 'Forge42 Solutions helps organizations modernize mission-critical platforms through enterprise Drupal, artificial intelligence, cloud engineering, and strategic consulting.'|t }}</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/solutions">{{ 'Explore Our Solutions'|t }}</a>
+          <a class="btn btn--secondary" href="/contact">{{ 'Schedule a Consultation'|t }}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section text-center">
+      <div class="forge-container section__intro">
+        <h2>{{ 'We make complex technology manageable.'|t }}</h2>
+        <p>{{ 'Modernize legacy systems, reduce technical debt, apply AI responsibly, and build secure platforms designed for long-term success.'|t }}</p>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="forge-container">
+        <div class="section__intro">
+          <p class="hero__eyebrow">{{ 'Solutions that drive results'|t }}</p>
+          <h2>{{ 'Comprehensive Solutions. Measurable Outcomes.'|t }}</h2>
+        </div>
+        <div class="card-grid">
+          {% set cards = [
+            ['Enterprise Modernization','Transform aging platforms into secure, scalable, future-ready systems.'],
+            ['Enterprise Drupal Engineering','Architect, migrate, and optimize mission-critical Drupal platforms.'],
+            ['Artificial Intelligence Enablement','Apply practical AI to automate processes and improve decisions.'],
+            ['Cloud Transformation','Build secure, scalable cloud environments and modern DevOps.'],
+            ['Digital Operations','Proactive monitoring, maintenance, security, and optimization.'],
+            ['Compliance & Accessibility','Build WCAG, Section 508, security, and governance into delivery.']
+          ] %}
+          {% for card in cards %}
+            <article class="card">
+              <div class="card__icon">{{ loop.index }}</div>
+              <h3>{{ card[0] }}</h3>
+              <p>{{ card[1] }}</p>
+              <a href="/solutions">{{ 'Learn more'|t }} →</a>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="forge-container">
+        <div class="section__intro">
+          <h2>{{ 'The Forge42 Engineering Framework™'|t }}</h2>
+          <p>{{ 'Every engagement follows a structured methodology that delivers predictable results and long-term value.'|t }}</p>
+        </div>
+        <div class="framework">
+          {% for step in ['Discover','Architect','Engineer','Validate','Launch','Optimize'] %}
+            <div class="framework__step"><strong>{{ loop.index }}. {{ step }}</strong></div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {% if page.content_top %}
+      <section class="section section--muted"><div class="forge-container">{{ page.content_top }}</div></section>
+    {% endif %}
+
+    {% if page.content %}
+      <section class="section"><div class="forge-container">{{ page.content }}</div></section>
+    {% endif %}
+
+    {% if page.content_bottom %}
+      <section class="section section--muted"><div class="forge-container">{{ page.content_bottom }}</div></section>
+    {% endif %}
+
+    <section class="cta">
+      <div class="forge-container">
+        <h2>{{ 'Ready to modernize your platform?'|t }}</h2>
+        <p>{{ 'Start with the Forge42 Modernization Assessment™ and receive a practical, prioritized roadmap.'|t }}</p>
+        <a class="btn btn--secondary" href="/contact">{{ 'Start a Conversation'|t }}</a>
+      </div>
+    </section>
+  </main>
+{% else %}
+  <main id="main-content" class="main-content">
+    {% if page.highlighted %}<div class="forge-container">{{ page.highlighted }}</div>{% endif %}
+    {% if page.content_top %}<section class="section section--muted"><div class="forge-container">{{ page.content_top }}</div></section>{% endif %}
+    <section class="section"><div class="forge-container">{{ page.content }}</div></section>
+    {% if page.content_bottom %}<section class="section section--muted"><div class="forge-container">{{ page.content_bottom }}</div></section>{% endif %}
+  </main>
+{% endif %}
+
+<footer class="site-footer">
+  <div class="forge-container">
+    {{ page.footer }}
+    <p class="mb-0">© {{ "now"|date("Y") }} Forge42 Solutions. {{ forge42_tagline }}</p>
+  </div>
+</footer>

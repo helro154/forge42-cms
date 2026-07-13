@@ -1,0 +1,6 @@
+<article class="card">
+  {% if icon %}<div class="card__icon">{{ icon }}</div>{% endif %}
+  <h3>{{ title }}</h3>
+  <p>{{ text }}</p>
+  {% if url %}<a href="{{ url }}">{{ link_text|default('Learn more') }}</a>{% endif %}
+</article>

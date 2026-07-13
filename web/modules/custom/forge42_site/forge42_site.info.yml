@@ -1,0 +1,9 @@
+name: Forge42 Site
+type: module
+description: 'Starter configuration and homepage setup for Forge42 Solutions.'
+package: Forge42
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
+  - drupal:block
+  - drupal:menu_ui
