@@ -1,0 +1,18 @@
+uuid: cddb5a77-7878-4d78-90c1-b79bf023baa7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Location
+type: location
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

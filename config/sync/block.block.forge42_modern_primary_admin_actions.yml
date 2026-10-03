@@ -1,0 +1,20 @@
+uuid: bf001cec-1bb5-4cf9-b19a-3901e3e4619b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forge42_modern
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: forge42_modern_primary_admin_actions
+theme: forge42_modern
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

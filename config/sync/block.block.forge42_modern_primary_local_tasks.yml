@@ -1,0 +1,22 @@
+uuid: 5137db95-29b9-44b0-9595-378c5008f525
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forge42_modern
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: forge42_modern_primary_local_tasks
+theme: forge42_modern
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

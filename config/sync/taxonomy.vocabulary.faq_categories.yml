@@ -1,0 +1,9 @@
+uuid: e7bf98e6-f31d-4137-b703-affbc7b2ef26
+langcode: en
+status: true
+dependencies: {  }
+name: 'FAQ Categories'
+vid: faq_categories
+description: 'Categories used to organize frequently asked questions.'
+weight: 0
+new_revision: false

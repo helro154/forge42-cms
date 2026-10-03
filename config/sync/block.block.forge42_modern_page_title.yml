@@ -1,0 +1,20 @@
+uuid: edbe3a70-65aa-4c5b-9837-cae44a062aec
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forge42_modern
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: forge42_modern_page_title
+theme: forge42_modern
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

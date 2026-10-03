@@ -1,0 +1,119 @@
+uuid: 14af0754-2b85-4fcc-8615-82efa3651e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_faq_category
+    - node.type.faq
+  module:
+    - node
+    - text
+    - user
+id: faqs
+label: FAQs
+module: views
+description: 'Frequently asked questions organized by category.'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Frequently Asked Questions'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: Question
+        body:
+          id: body
+          table: node__body
+          field: body
+          plugin_id: field
+          label: Answer
+        field_faq_category:
+          id: field_faq_category
+          table: node__field_faq_category
+          field: field_faq_category
+          plugin_id: field
+          label: Category
+      pager:
+        type: none
+        options:
+          offset: 0
+      exposed_form:
+        type: basic
+        options: {  }
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: standard
+          order: ASC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          value: '1'
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          value:
+            faq: faq
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_faq_category'
+  page_1:
+    id: page_1
+    display_title: 'FAQ Page'
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: faq
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_faq_category'

@@ -1,0 +1,22 @@
+uuid: 1943c1da-4069-40bb-83cf-48f3858706a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forge42_modern
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: forge42_modern_content
+theme: forge42_modern
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

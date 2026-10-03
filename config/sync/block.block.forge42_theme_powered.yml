@@ -1,0 +1,22 @@
+uuid: 61c883ee-d2dd-460f-8739-f3b27befc6c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forge42_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: forge42_theme_powered
+theme: forge42_theme
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

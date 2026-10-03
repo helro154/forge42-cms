@@ -1,0 +1,22 @@
+uuid: a1bb5bd8-f3aa-40c1-8b3d-41bd75d645ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - forge42_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: forge42_theme_help
+theme: forge42_theme
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
